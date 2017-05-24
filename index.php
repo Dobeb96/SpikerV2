@@ -7,7 +7,8 @@
     <body>
         <!-- LOGO WITRYNY -->
         <header>
-            <!-- tutaj logo i wszelkie informacje potrzebne w naglowku witryny -->
+            <h1 class="main_logo">Spiker</h1>
+            <p class="sub_logo">Twoje centrum wymiany notatek</p>
         </header>
         
         <!-- CONTENT POBIERANY Z SERWERA-->
