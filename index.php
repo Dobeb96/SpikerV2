@@ -26,6 +26,7 @@
 
                     fclose($file);   
                 }
+                else print $dir."<br>";
             }
             ?>
         </section>
