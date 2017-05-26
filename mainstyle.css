@@ -1,10 +1,27 @@
 #container {
-    font-style: Lato;
 }
 
 #header {
     height: 20%;
     border-bottom: 1px solid #7A6969;
+}
+
+h1 {
+	font-family: Lato;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 31px;
+}
+
+p1 {
+	font-family: Lato;
+	font-size: 26px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
 }
 
 #section {
