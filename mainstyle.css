@@ -1,7 +1,7 @@
 #container {
 }
 
-#header {
+header {
     height: 20%;
     border-bottom: 1px solid #7A6969;
 }
@@ -15,7 +15,7 @@ h1 {
 	line-height: 31px;
 }
 
-p1 {
+p {
 	font-family: Lato;
 	font-size: 26px;
 	font-style: normal;
@@ -37,7 +37,7 @@ p1 {
     float: right;
 }
 
-#footer {
+footer {
     height: 10%;  
     clear: both;
     text-align: center;

@@ -9,14 +9,15 @@
         <div id="container">
             
             <!-- LOGO WITRYNY -->
-            <div id="header">
+            <header>
                 <h1 class="main_logo">Spiker</h1>
                 <p class="sub_logo">Twoje centrum wymiany notatek</p>
-            </div>  
-        
+            </header> 
+            
             <!-- CONTENT POBIERANY Z SERWERA -->
             <section>
             <?php
+
             if (isset ($_GET['id']))
                 $id = $_GET['id'];
 
@@ -26,11 +27,13 @@
 
             ?> 
             </section>
-
+            
             <!-- STOPKA WITRYNY -->
             <footer>
                 <!-- tutaj dodatkowe informacje np. zrzeczenie sie praw autorskich czy inne -->
+                test3
             </footer>
-        </div> <!-- end container -->
+            
+        </div> <!-- END container -->
     </body>
 </html>
