@@ -17,16 +17,18 @@
             // glob() przeszuka pliki na serwerze w poszukiwaniu podanego patternu ("./*") i zwroci je jako tablica; drugi parametr oznacza znajdowanie tylko katalogow
             $directories = glob("./*", GLOB_ONLYDIR);
                 
+            $id = 0;
             foreach ($directories as $dir) {                
-                // dla kazdego katalogu wejdz do niego i otworz plik name.txt do odczytu ("r")
-                // w pliku name.txt znajduja sie nazwy przedmiotow z duzej litery i bez podkreslnikow
+                
                 if( $file = fopen($dir."/name.txt", "r") ) {
+                    
+                    print "<a href='./przedmiot.php?id=".$id++."'>";
                     // wydrukuj zawartosc pliku
-                    print fgets($file)."<br>";
+                    print fgets($file);
+                    print "</a><br>";
 
                     fclose($file);   
                 }
-                else print $dir."<br>";
             }
             ?>
         </section>
