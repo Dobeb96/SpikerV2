@@ -17,14 +17,31 @@
             <!-- CONTENT POBIERANY Z SERWERA -->
             <section>
             <?php
-
-            if (isset ($_GET['id']))
+            
+            if (isset ($_GET['id'])) {
                 $id = $_GET['id'];
 
             $directories = glob("./*", GLOB_ONLYDIR);
-
+            print "<a href='./index.php'>Powrót</a>";
             print $directories[$id];
-
+            }
+                
+            include "przedmiot_akcje_grupowe.php";
+            
+            print "<h3>Przesłane pliki</h3>";
+            $counter = 0;
+            $files = glob($directories[$id]."/*");
+            foreach ($files as $f) {
+                print "<input type='checkbox' id='$counter' />";
+                print "<label for='$counter'>$f</label>";
+                print "<a href='".$f."' class='download' download='".$f."'>Pobierz</a>";
+                print "<a href='tobecontinued' class='change'>Zmień</a>";
+                print "<br>";
+                $counter++;
+            }
+                
+            include "przedmiot_akcje_grupowe.php";
+            include "przedmiot_upload.php";
             ?> 
             </section>
             
