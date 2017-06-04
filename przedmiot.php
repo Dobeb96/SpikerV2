@@ -26,23 +26,28 @@
             print $directories[$id];
             }
                 
+            print "<form action='ad.php' method='post'>";
+            print "<input type='hidden' name='id' value='".$id." />";
+            print "<input type='hidden' name='path' value='".$directories[$id]."' />";
             include "przedmiot_akcje_grupowe.php";
             
             print "<h3>Przesłane pliki</h3>";
             $counter = 0;
             $files = glob($directories[$id]."/*");
             foreach ($files as $f) {
-                print "<input type='checkbox' id='$counter' />";
+                if ($f == $directories[$id]."/name.txt") { $counter++; continue; }
+                print "<input type='checkbox' name='subject[$counter]' id='$counter' />";
                 print "<label for='$counter'>$f</label>";
-                print "<a href='".$f."' class='download' download='".$f."'>Pobierz</a>";
+                print "<a href='".$f."' class='download' download='"."$f"."'>Pobierz</a>";
                 print "<a href='tobecontinued' class='change'>Zmień</a>";
                 print "<br>";
                 $counter++;
             }
                 
             include "przedmiot_akcje_grupowe.php";
+            print "</form>";
             include "przedmiot_upload.php";
-            ?> 
+            ?>
             </section>
             
             <!-- STOPKA WITRYNY -->

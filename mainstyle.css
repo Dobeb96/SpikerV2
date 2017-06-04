@@ -42,3 +42,24 @@ footer {
     clear: both;
     text-align: center;
 }
+
+.ad_container {
+    width: 400px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: powderblue;
+}
+
+.download_button {
+    visibility: hidden; <!-- ukryty do momentu klikniecia w reklame -->
+}
+
+.download_button_visible {
+    visibility: visible;
+    font-size: 24px;
+    width: 10em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

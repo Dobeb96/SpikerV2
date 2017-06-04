@@ -15,25 +15,24 @@
             </header> 
             
             <!-- CONTENT POBIERANY Z SERWERA -->
-            <a href="" onClick="download()" id="link">Pobierz</a>
+            <h3 class="spiker_info" align="center">Przed pobieraniem daj klika w reklamę</h3>
+            
+            <div class="ad_container" id="ad1" onClick="ad_clicked(this)"></div>
+
+            <?php
+            print "<form action='pobierz.php' method='post'>";
+            print "<input type='hidden' name='id' value='".$_POST['id']." />";
+            print "<input type='hidden' name='path' value='".$_POST['path']."' />";
+            print "<input type='submit' name='download' id='down' value='Pobierz' class='download_button' />";
+            print "</form>";
+            ?>
             
             <script>
-            function download() {
-                e = document.getElementById("link");
-                e.innerHTML = "Zmieniono";
-                <?php
-                if (isset($_POST['subject'])) {
-                    $files = glob($_POST['path']."/*"); // tablica z wszystkimi plikami
-
-                    foreach ($_POST['subject'] as $index => $value) {
-                        print $files[$index];
-                        print "<br>";
-                    }
-                }
-                ?>
+            function ad_clicked(source) {
+                document.getElementById('down').setAttribute("class", "download_button_visible");
             }
             </script>
-                   
+                              
             <!-- STOPKA WITRYNY -->
             <footer>
                 <!-- tutaj dodatkowe informacje np. zrzeczenie sie praw autorskich czy inne -->
