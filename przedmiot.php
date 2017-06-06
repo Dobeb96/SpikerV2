@@ -48,7 +48,7 @@
                 print "<input type='checkbox' name='subject[$counter]' id='$counter' />";
                 print "<label for='$counter'>$fs</label>";
                 print "<a href='".$f."' class='download' download='"."$fs"."'>Pobierz</a>";
-                print "<a href='tobecontinued' class='change'>Zmień</a>";
+//                print "<a href='tobecontinued' class='change'>Zmień</a>";
                 print "<br>";
                 $counter++;
             }

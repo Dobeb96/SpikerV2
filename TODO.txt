@@ -1,6 +1,8 @@
-TODO: Ustaliæ maksymalny rozmiar wgrywanego pliku
+1) TODO: Ustawiæ automatyczne przekierowanie do pliku index.php
 
-TODO: Pozwoliæ na zmianê nazwy wgranego wczeœniej pliku
+2) TODO: Ustaliæ maksymalny rozmiar wgrywanego pliku
+
+3) TODO: Pozwoliæ na zmianê nazwy wgranego wczeœniej pliku
 
 TODO: Pozwoliæ na dodawanie opisu do wgrywanego pliku
 
