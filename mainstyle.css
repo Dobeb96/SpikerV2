@@ -1,4 +1,7 @@
-#container {
+body {
+    font-family: 'Consolas', serif;
+    font-style: normal;
+	font-variant: normal;
 }
 
 header {
@@ -6,8 +9,8 @@ header {
     border-bottom: 1px solid #7A6969;
 }
 
-h1 {
-	font-family: Lato;
+.header h1 {
+	font-family: 'Lato', serif;
 	font-size: 40px;
 	font-style: normal;
 	font-variant: normal;
@@ -16,25 +19,9 @@ h1 {
 }
 
 p {
-	font-family: Lato;
 	font-size: 26px;
 	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 20px;
-}
-
-#section {
-}
-
-#leftnav {
-    width: 10%;
-    float: left;
-}
-
-#rightnav {
-    width: 10%;
-    float: right;
+	font-weight: 200;
 }
 
 footer {
@@ -44,22 +31,34 @@ footer {
 }
 
 .ad_container {
-    width: 400px;
-    height: 300px;
+    width: 336px;
+    height: 280px;
     margin-left: auto;
     margin-right: auto;
     background-color: powderblue;
 }
 
-.download_button {
-    visibility: hidden; <!-- ukryty do momentu klikniecia w reklame -->
+.download_button_inactive {
+    display: none; /* ukryty do momentu klikniecia w reklame */
 }
 
-.download_button_visible {
-    visibility: visible;
+.download_button_active {
+    display: inherit;
     font-size: 24px;
-    width: 10em;
+/*    border: 1px solid;*/
+    margin: 0px;
+    padding: 10px 15px;
+    width: 336px;
     text-align: center;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+.ad_table {
     margin-left: auto;
     margin-right: auto;
+}
+
+.ad_table p {
+    color: lightgray;
 }

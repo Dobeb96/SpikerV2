@@ -1,0 +1,7 @@
+TODO: Ustaliæ maksymalny rozmiar wgrywanego pliku
+
+TODO: Pozwoliæ na zmianê nazwy wgranego wczeœniej pliku
+
+TODO: Pozwoliæ na dodawanie opisu do wgrywanego pliku
+
+TODO: Wprowadziæ system oceniania plików

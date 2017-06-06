@@ -1,45 +1,21 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
-    <head>
-        <title>Spiker</title>
-        <meta charset="UTF-8" />
-        <link href="mainstyle.css" rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
-    </head>
-    <body>
-        <div id="container">
-            
-            <!-- LOGO WITRYNY -->
-            <header>
-                <h1 class="main_logo">Spiker</h1>
-                <p class="sub_logo">Twoje centrum wymiany notatek</p>
-            </header> 
-            
-            <!-- CONTENT POBIERANY Z SERWERA -->
-            <a href="" onClick="download()" id="link">Pobierz</a>
-            
-            <script>
-            function download() {
-                e = document.getElementById("link");
-                e.innerHTML = "Zmieniono";
-                <?php
-                if (isset($_POST['subject'])) {
-                    $files = glob($_POST['path']."/*"); // tablica z wszystkimi plikami
+<?php
+            ob_clean();
+            ob_end_flush();
 
-                    foreach ($_POST['subject'] as $index => $value) {
-                        print $files[$index];
-                        print "<br>";
-                    }
-                }
-                ?>
+            $zip = new ZipArchive();
+            $zipname = substr($_POST['path'], 2).substr(time(), 5).".zip";
+            $zip->open($zipname, ZipArchive::CREATE);
+
+            $files = glob($_POST['path']."/*");
+            for ($i = 0, $len = count($files); $i < $len; $i++) {
+                if (isset($_POST['file_id'][$i]))
+                    $zip->addFile($files[$i], basename($files[$i]));
             }
-            </script>
-                   
-            <!-- STOPKA WITRYNY -->
-            <footer>
-                <!-- tutaj dodatkowe informacje np. zrzeczenie sie praw autorskich czy inne -->
-                test3
-            </footer>
+            $zip->close();
             
-        </div> <!-- END container -->
-    </body>
-</html>
+            header('Content-Type: application/zip');
+            header('Content-Disposition: attachment; filename='.$zipname);
+            header('Content-Length: ' . filesize($zipname));
+            readfile($zipname);
+            unlink($zipname);
+?>
