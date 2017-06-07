@@ -31,11 +31,8 @@
                     <div class="download_button_active" id="up" style="width: 625px;"><p>Pobierz</p></div>
 
                     <?php
-                    
-                    
-                    
-                    $id = $_POST['id'];
-                    $path = $_POST['path'];
+                    if (isset($_POST['id'])) $id = $_POST['id'];
+                    if ($_POST['path']) $path = $_POST['path'];
                     
                     print "<form action='./pobierz.php' method='post'>";
                     if (isset($_POST['subject'])) {

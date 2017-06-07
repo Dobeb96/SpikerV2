@@ -25,7 +25,7 @@ if (isset($_FILES['uploaded_file'])) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $('#file1').change(function() {
-    var maxFileSize = 4;
+    var maxFileSize = 10;
     var text = document.getElementById('file_info');
     if (this.files[0].size/1024/1024 > maxFileSize) {
         text.innerHTML = "Zbyt duży plik, max " + maxFileSize + "MB";
