@@ -18,7 +18,6 @@
             
             <table class="ad_table">
             <tr>
-                <td valign="top"><p>1)</p></td>
                 <td>
                     <!-- REKLAMA -->
                     <div class="ad_container" onClick="ad_clicked(this)">
@@ -26,11 +25,10 @@
                     </div>
                 </td>
             </tr>
-                
-            <tr>
-                <td valign="top"><p>2)</p></td>
+              <div id="bottom"></div>  
+            <tr>                
                 <td>
-                    <div class="download_button_active" id="up" style="width: 300px;"><p>Pobierz</p></div>
+                    <div class="download_button_active" id="up" style="width: 625px;"><p>Pobierz</p></div>
 
                     <?php
                     
