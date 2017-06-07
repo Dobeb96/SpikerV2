@@ -20,7 +20,6 @@
             
             if (isset ($_GET['id'])) {
                 $id = $_GET['id'];
-
             $directories = glob("./*", GLOB_ONLYDIR);
             print "<a href='./index.php'>Powrót</a>";
             print substr($directories[$id], 1);

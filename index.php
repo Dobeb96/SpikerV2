@@ -38,7 +38,7 @@
             
             <!-- STOPKA WITRYNY --> 
 
-            <footer class="footer">
+            <footer>
 
             </footer>
             

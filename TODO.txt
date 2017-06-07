@@ -1,9 +1,22 @@
-1) TODO: Ustawiæ automatyczne przekierowanie do pliku index.php
+	1) TODO: Ustawiæ automatyczne przekierowanie do pliku index.php
 
-2) TODO: Ustaliæ maksymalny rozmiar wgrywanego pliku
+	2) TODO: Ustaliæ maksymalny rozmiar wgrywanego pliku
 
 3) TODO: Pozwoliæ na zmianê nazwy wgranego wczeœniej pliku
+
+	4) TODO: Po wgraniu pliku strona powinna prze³adowaæ siê automatycznie
+
+5) Dodaæ ikonkê z S
 
 TODO: Pozwoliæ na dodawanie opisu do wgrywanego pliku
 
 TODO: Wprowadziæ system oceniania plików
+
+TODO: Po trzecim klikniêciu w pojedynczy przycisk download, wyœwietl reklamê
+
+
+1) Dodaæ strza³kê
+
+2) Ustawiæ odstêpy miêdzy przyciskami Pobierz a Zmieñ
+
+3) Przycisk Zmieñ nieco hmm ukryæ, w sensie daæ mu kolor szary ¿eby nie by³ tak mocno widoczny jak Pobierz
