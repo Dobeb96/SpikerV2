@@ -15,6 +15,15 @@
             </header> 
             
             <!-- CONTENT POBIERANY Z SERWERA -->
+            <?php 
+            if (isset ($_POST['id'])) {
+                $id = $_POST['id'];
+                $directories = glob("./*", GLOB_ONLYDIR);
+                print "<a href='./index.php'>Powrót</a>";
+                print "/";
+                print "<a href='./przedmiot.php?id=".$id."'>".substr($directories[$id], 2)."</a>";
+            }
+            ?>
             
             <table class="ad_table">
             <tr>
