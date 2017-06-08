@@ -15,6 +15,7 @@
             </header> 
             
             <!-- CONTENT POBIERANY Z SERWERA -->
+            <div id='adcheck'></div>
             <?php 
             if (isset ($_POST['id'])) {
                 $id = $_POST['id'];
@@ -25,7 +26,7 @@
             }
             ?>
             
-            <table class="ad_table">
+            <table class="ad_table" id="ad_table_id1">
             <tr>
                 <td>
                     <!-- REKLAMA -->
@@ -34,7 +35,7 @@
                     </div>
                 </td>
             </tr>
-              <div id="bottom"></div>  
+              <div id="bottom"></div>
             <tr>                
                 <td>
                     <div class="download_button_active" id="up" style="width: 625px;"><p>Pobierz</p></div>
@@ -61,9 +62,21 @@
             </tr>
             </table>
             
+            <!-- SPRAWDZ ADBLOCKA -->
+            <script src="./ads.js" type="text/javascript"></script>
+            <script>
+            if(document.getElementById('XNPIiaZmxEev')){
+              var doNothing = true;
+            } else {
+                document.getElementById('ad_table_id1').innerHTML = "";
+                document.getElementById('ad_table_id1').innerHTML = "<br><br><font color='red'>Używasz adblocka, proszę rozważ wyłączenie go dla tej strony, bo reklamy to jedyne źródło opłacenia naszego serwera</font>";
+                document.getElementById('bottom').setAttribute("class", "download_button_inactive");
+            }
+            </script>
+            
             <script>
             function ad_clicked(source) {
-                document.getElementById('up').setAttribute("class", "download_button_inactive")
+                document.getElementById('up').setAttribute("class", "download_button_inactive");
                 document.getElementById('down').setAttribute("class", "download_button_active");
             }
             </script>
