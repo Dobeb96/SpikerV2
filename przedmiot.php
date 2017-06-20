@@ -3,8 +3,20 @@
     <head>
         <title>Spiker</title>
         <meta charset="UTF-8" />
-        <link href="mainstyle.css" rel="stylesheet" type="text/css">
+        <link href="mainstyle.css?v=1.0.6.4" rel="stylesheet" type="text/css">
         <link rel="stylesheet"  href="//fonts.googleapis.com/css?family=Lato&effect=anaglyph">
+                
+        <!-- ICONS AND COLORS -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#0055f2">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#0055f2">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0055f2">
+        <!-- Default phone zoom -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div id="container">
@@ -57,11 +69,6 @@
             include "przedmiot_upload.php";
             ?>
             </section>
-
-            <!-- STOPKA WITRYNY -->
-            <footer>
-
-            </footer>
             
         </div> <!-- END container -->
         

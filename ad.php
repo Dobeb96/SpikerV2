@@ -3,9 +3,21 @@
     <head>
         <title>Spiker</title>
         <meta charset="UTF-8" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link href="mainstyle.css?v=1.0.3" rel="stylesheet" type="text/css">
+        <link href="mainstyle.css?v=1.0.6.4" rel="stylesheet" type="text/css">
         <link rel="stylesheet"  href="//fonts.googleapis.com/css?family=Lato&effect=anaglyph">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- ICONS AND COLORS -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#0055f2">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#0055f2">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0055f2">
+        <!-- Default phone zoom -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div id="container">
@@ -27,20 +39,15 @@
             }
             ?>
             
+<!--
             <table class="ad_table" id="ad_table_id1">
             <tr>
                 <td align="center">
+-->
                     <!-- REKLAMA -->
-                        <script type="text/javascript">
-                          ( function() {
-                            if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-                            var unit = {"calltype":"async[2]","publisher":"doberman96","width":300,"height":250,"sid":"Chitika Default"};
-                            var placement_id = window.CHITIKA.units.length;
-                            window.CHITIKA.units.push(unit);
-                            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-                        }());
-                        </script>
-                        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+<!--                    <a onclick="ad_clicked()" target="_blank" href="http://ad.zanox.com/ppc/?42887195C1993562246T"><img src="http://ad.zanox.com/ppv/?42887195C1993562246" align="bottom" width="300" height="250" border="0" hspace="1" alt="summersale 2017 he Image Banner 300 x 250"></a>-->
+                    <!-- END REKLAMA -->
+<!--
                 </td>
             </tr>
             <tr>
@@ -51,6 +58,7 @@
             <tr>                
                 <td>
                     <div class="download_button_active" id="up" style="width: 625px;"><p>Pobierz</p></div>
+-->
 
                     <?php
                     if (isset($_POST['id'])) $id = $_POST['id'];
@@ -67,34 +75,16 @@
                     
                     print "<input type='hidden' name='id' value='".$id."' />";
                     print "<input type='hidden' name='path' value='".$path."' />";
-                    print "<input type='submit' name='download' id='down' style='font-family: Consolas;' value='Pobierz' class='download_button_inactive' />";
+                    print "<input type='submit' name='download' id='down' style='font-family: Consolas;' value='Pobierz' class='download_button_active' />";
                     print "</form>";
                     ?>
+<!--
                 </td>
             </tr>
             </table>
+-->
             
-            <script src="./ads.js" type="text/javascript"></script>
             <script>
-            // SPRAWDZ ADBLOCKA
-            if(document.getElementById('XNPIiaZmxEev')){
-              var doNothing = true;
-            } else {
-                document.getElementById('ad_table_id1').innerHTML = "";
-                document.getElementById('ad_table_id1').innerHTML = "<br><br><font color='red'>Używasz adblocka, proszę rozważ wyłączenie go dla tej strony, bo reklamy to jedyne źródło opłacenia naszego serwera</font>";
-                document.getElementById('bottom').setAttribute("class", "download_button_inactive");
-            }
-            
-            // IFRAME CLICK MONITORING
-            var monitor = setInterval(function(){
-                var elem = document.activeElement;
-                if(elem && elem.tagName == 'IFRAME'){
-                    ad_clicked();
-                    clearInterval(monitor);
-                }
-            }, 100);
-            // END IFRAME
-                
             function ad_clicked() {
                 document.getElementById('up').setAttribute("class", "download_button_inactive");
                 document.getElementById('down').setAttribute("class", "download_button_active");

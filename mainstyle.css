@@ -5,17 +5,16 @@ body {
 }
 
 header {
-    height: 20%;
+/*    height: 20%;*/
     border-bottom: 1px solid #7A6969;
 }
 
 .header h1 {
 	font-family: 'Lato', serif;
-	font-size: 40px;
+	font-size: 250%;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
-	line-height: 31px;
 }
 
 a.download
@@ -45,8 +44,8 @@ p {
 }
 
 footer {
-    height: 10%;  
-    clear: both;
+    font-size: small;
+    color: #d9d9d9; /* taki szarawy */
     text-align: center;
 }
 
@@ -96,4 +95,8 @@ footer {
 
 .ad_table p {
     color: lightgray;
+}
+
+.underline:hover {
+    text-decoration: underline;
 }
