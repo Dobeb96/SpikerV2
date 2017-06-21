@@ -3,7 +3,7 @@
     <head>
         <title>Spiker</title>
         <meta charset="UTF-8" />
-        <link href="mainstyle.css?v=1.0.6.4" rel="stylesheet" type="text/css">
+        <link href="mainstyle.css?v=1.0.6.5" rel="stylesheet" type="text/css">
         <link rel="stylesheet"  href="//fonts.googleapis.com/css?family=Lato&effect=anaglyph">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
@@ -39,26 +39,24 @@
             }
             ?>
             
-<!--
             <table class="ad_table" id="ad_table_id1">
             <tr>
-                <td align="center">
--->
+                <td align="center" id="td_ad_1">
                     <!-- REKLAMA -->
-<!--                    <a onclick="ad_clicked()" target="_blank" href="http://ad.zanox.com/ppc/?42887195C1993562246T"><img src="http://ad.zanox.com/ppv/?42887195C1993562246" align="bottom" width="300" height="250" border="0" hspace="1" alt="summersale 2017 he Image Banner 300 x 250"></a>-->
+                    <div class="ad_container" onclick="ad_clicked()">
+                        <script type="text/javascript" src="//www.adfreestyle.pl/show/RtgEIcYRVMA"></script>
+                    </div>
                     <!-- END REKLAMA -->
-<!--
                 </td>
             </tr>
             <tr>
-                <td>
+                <td id="td_arrow_1">
                     <div id="bottom"></div>
                 </td>    
             </tr>
             <tr>                
                 <td>
-                    <div class="download_button_active" id="up" style="width: 625px;"><p>Pobierz</p></div>
--->
+                    <div class="download_button_active" id="up" style="width: 336px;"><p>Pobierz</p></div>
 
                     <?php
                     if (isset($_POST['id'])) $id = $_POST['id'];
@@ -75,17 +73,17 @@
                     
                     print "<input type='hidden' name='id' value='".$id."' />";
                     print "<input type='hidden' name='path' value='".$path."' />";
-                    print "<input type='submit' name='download' id='down' style='font-family: Consolas;' value='Pobierz' class='download_button_active' />";
+                    print "<input type='submit' name='download' id='down' style='font-family: Consolas;' value='Pobierz' class='download_button_inactive' />";
                     print "</form>";
                     ?>
-<!--
                 </td>
             </tr>
             </table>
--->
             
             <script>
             function ad_clicked() {
+                document.getElementById('td_ad_1').setAttribute("class", "download_button_inactive");
+                document.getElementById('td_arrow_1').setAttribute("class", "download_button_inactive");
                 document.getElementById('up').setAttribute("class", "download_button_inactive");
                 document.getElementById('down').setAttribute("class", "download_button_active");
             }

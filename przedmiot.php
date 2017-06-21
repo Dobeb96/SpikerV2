@@ -3,7 +3,7 @@
     <head>
         <title>Spiker</title>
         <meta charset="UTF-8" />
-        <link href="mainstyle.css?v=1.0.6.4" rel="stylesheet" type="text/css">
+        <link href="mainstyle.css?v=1.0.6.5" rel="stylesheet" type="text/css">
         <link rel="stylesheet"  href="//fonts.googleapis.com/css?family=Lato&effect=anaglyph">
                 
         <!-- ICONS AND COLORS -->
@@ -69,7 +69,6 @@
             include "przedmiot_upload.php";
             ?>
             </section>
-            
         </div> <!-- END container -->
         
         <!--        GOOGLE ANALYTICS -->
