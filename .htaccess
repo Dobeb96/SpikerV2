@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.spiker.com.pl(.*) [NC]
+RewriteRule ^(.*)$ http://spiker.com.pl/$1 [R=301,L]

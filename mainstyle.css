@@ -58,13 +58,12 @@ footer {
 }
 
 .download_button_inactive {
-    display: none; /* ukryty do momentu klikniecia w reklame */
+    display: none;
 }
 
 .download_button_active {
     display: inherit;
     font-size: 24px;
-/*    border: 1px solid;*/
     margin: 40px;
     padding: 10px 15px;
     width: 336px;

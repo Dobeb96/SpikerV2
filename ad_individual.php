@@ -25,42 +25,26 @@
             <header class="header">
                 <h1 class="font-effect-anaglyph">Spiker<sub>v2</sub></h1>
             </header> 
-
-            <!-- CONTENT POBIERANY Z SERWERA -->
-            <section>
-            <?php
-                $directories = glob("./*", GLOB_ONLYDIR);
-                
-                $id = 0;
-                foreach ($directories as $dir) {                
-
-                    if ($dir == "./cgi-bin") { $id++; continue; }
-                    if( $file = fopen($dir."/name.txt", "r") ) {
-
-                        print "<a href='./przedmiot.php?id=".$id++."'>";
-
-                        print fgets($file);
-                        print "</a><br>";
-
-                        fclose($file);   
-                    }
-                }
-            ?>
-            </section>
+            
+            <center>
+            Cieszymy się, że możemy Ci pomóc przed sesją. Jeśli chcesz się odwdzięczyć, kliknij proszę w poniższą reklamę<br />
+                <sub>(jeśli nie widzisz reklamy możesz rozważyć wyłączenie adblocka dla spiker.com.pl)</sub>
+            </center>
+            
+            <!-- REKLAMA -->
+            <div class="ad_container" id="ad_1" onclick="ad_clicked()">
+                <script type="text/javascript" src="//www.adfreestyle.pl/show/RtgEIcYRVMA"></script>
+            </div>
         </div> <!-- END container -->
         
-        <footer>
-        <br>serwer opłacony do 4 czerwca 2018<br>
-            <span class="underline">admin@spiker.com.pl</span>
-        </footer>
-        
-                
-        <!-- COOKIES :3 -->
+        <!-- COOKIES -->
         <script src="./cookies.js"></script>
         <script>
-        if (readCookie("ad_current_counter") == null) {
+        function ad_clicked() {
+            var daily = Number(1) + Number(readCookie("ad_daily_counter"));
             createCookie("ad_current_counter", 0, 1);
-            createCookie("ad_daily_counter", 0, 1);
+            createCookie("ad_daily_counter", daily, 1);
+            window.open("./przedmiot.php?id=<?php echo $_GET['id'] ?>", "_self");
         }
         </script>
         

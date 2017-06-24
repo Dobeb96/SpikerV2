@@ -3,7 +3,7 @@
     <head>
         <title>Spiker</title>
         <meta charset="UTF-8" />
-        <link href="mainstyle.css?v=1.0.6.5" rel="stylesheet" type="text/css">
+        <link href="mainstyle.css?v=1.0.6.6" rel="stylesheet" type="text/css">
         <link rel="stylesheet"  href="//fonts.googleapis.com/css?family=Lato&effect=anaglyph">
                 
         <!-- ICONS AND COLORS -->
@@ -28,6 +28,7 @@
             
                 <!-- CONTENT POBIERANY Z SERWERA -->
             <section>
+            <span id="test"></span>
             <?php
             
             if (isset ($_GET['id'])) {
@@ -58,7 +59,7 @@
                 if ($f == $directories[$id]."/name.txt") { $counter++; continue; }
                 print "<input type='checkbox' name='subject[$counter]' id='$counter' />";
                 print "<label for='$counter'>$fs</label>";
-                print "<a href='".$f."' class='download' download='"."$fs"."'>Pobierz</a>";
+                print "<a href='".$f."' class='download' onClick='countDownloads()' download='"."$fs"."'>Pobierz</a>";
 //                print "<a href='tobecontinued' class='change'>Zmień</a>";
                 print "<br>";
                 $counter++;
@@ -71,7 +72,25 @@
             </section>
         </div> <!-- END container -->
         
-        <!--        GOOGLE ANALYTICS -->
+        <!-- COOKIES -->
+        <script src="./cookies.js"></script>
+        <script>            
+        function countDownloads() {
+            if (readCookie("ad_current_counter") != null) {
+                var counts = Number(1) + Number(readCookie("ad_current_counter"));
+                var daily = readCookie("ad_daily_counter");
+                createCookie("ad_current_counter", counts, 1);
+
+                if (daily == 0 && counts >= 4) {
+                    window.open("./ad_individual.php?id=<?php echo $id ?>", "_self");
+                } else if (daily == 1 && counts >= 10) {
+                    window.open("./ad_individual.php?id=<?php echo $id ?>", "_self");
+                }
+            }
+        }
+        </script>
+        
+        <!-- GOOGLE ANALYTICS -->
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
