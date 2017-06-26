@@ -6,13 +6,13 @@
 
 	4) TODO: Po wgraniu pliku strona powinna prze³adowaæ siê automatycznie
 
-5) Dodaæ ikonkê z S
+	5) Dodaæ ikonkê z S
 
 TODO: Pozwoliæ na dodawanie opisu do wgrywanego pliku
 
 TODO: Wprowadziæ system oceniania plików
 
-TODO: Po trzecim klikniêciu w pojedynczy przycisk download, wyœwietl reklamê
+	TODO: Po trzecim klikniêciu w pojedynczy przycisk download, wyœwietl reklamê
 
 
 1) Dodaæ strza³kê

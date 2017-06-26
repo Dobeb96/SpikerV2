@@ -27,13 +27,13 @@
             </header> 
             
             <center>
-            Cieszymy się, że możemy Ci pomóc przed sesją. Jeśli chcesz się odwdzięczyć, kliknij proszę w poniższą reklamę<br />
+            Cieszymy się, że możemy Ci pomóc przed sesją. Jeśli możemy Cię o to prosić, kliknij w poniższą reklamę<br />
                 <sub>(jeśli nie widzisz reklamy możesz rozważyć wyłączenie adblocka dla spiker.com.pl)</sub>
             </center>
             
             <!-- REKLAMA -->
             <div class="ad_container" id="ad_1" onclick="ad_clicked()">
-                <script type="text/javascript" src="//www.adfreestyle.pl/show/RtgEIcYRVMA"></script>
+                <script type="text/javascript" src="http://www.adfreestyle.pl/show/dKR66fWbuZY"></script>
             </div>
         </div> <!-- END container -->
         

@@ -59,7 +59,7 @@
                 if ($f == $directories[$id]."/name.txt") { $counter++; continue; }
                 print "<input type='checkbox' name='subject[$counter]' id='$counter' />";
                 print "<label for='$counter'>$fs</label>";
-                print "<a href='".$f."' class='download' onClick='countDownloads()' download='"."$fs"."'>Pobierz</a>";
+                print "<a href='#' class='download' onclick='countDownloads(\"$f\", \"$fs\")'>Pobierz</a>";
 //                print "<a href='tobecontinued' class='change'>Zmień</a>";
                 print "<br>";
                 $counter++;
@@ -75,16 +75,22 @@
         <!-- COOKIES -->
         <script src="./cookies.js"></script>
         <script>            
-        function countDownloads() {
+        function countDownloads(filepath, file) {
             if (readCookie("ad_current_counter") != null) {
+                
                 var counts = Number(1) + Number(readCookie("ad_current_counter"));
                 var daily = readCookie("ad_daily_counter");
                 createCookie("ad_current_counter", counts, 1);
 
-                if (daily == 0 && counts >= 4) {
+                if ( (daily == 0 && counts >= 4) || (daily == 1 && counts >= 10) ) {
+                    // show ad
                     window.open("./ad_individual.php?id=<?php echo $id ?>", "_self");
-                } else if (daily == 1 && counts >= 10) {
-                    window.open("./ad_individual.php?id=<?php echo $id ?>", "_self");
+                } else {
+                    // download
+                    var a = document.createElement("a");
+                    a.setAttribute("href", filepath);
+                    a.setAttribute("download", file);
+                    a.click();
                 }
             }
         }
