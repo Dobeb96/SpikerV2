@@ -1,12 +1,18 @@
 body {
     font-family: 'Consolas', serif;
     font-style: normal;
-	font-variant: normal;
+    font-variant: normal;
+    word-wrap: break-word;
 }
 
 header {
 /*    height: 20%;*/
     border-bottom: 1px solid #7A6969;
+}
+
+#container section {
+    line-height: 1.1em;
+    margin-left: .5%;
 }
 
 .header h1 {
@@ -45,7 +51,7 @@ p {
 
 footer {
     font-size: small;
-    color: #d9d9d9; /* taki szarawy */
+    color: #bdbdbd; /* taki szarawy */
     text-align: center;
 }
 

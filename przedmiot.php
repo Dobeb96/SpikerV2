@@ -81,10 +81,10 @@
                 var counts = Number(1) + Number(readCookie("ad_current_counter"));
                 var daily = readCookie("ad_daily_counter");
                 createCookie("ad_current_counter", counts, 1);
-
-                if ( (daily == 0 && counts >= 4) || (daily == 1 && counts >= 10) ) {
+                if (false) {
+                // if ( (daily == 0 && counts >= 4) || (daily == 1 && counts >= 10) ) {
                     // show ad
-                    window.open("./ad_individual.php?id=<?php echo $id ?>", "_self");
+                    // window.open("./ad_individual.php?id=<?php echo $id ?>", "_self");
                 } else {
                     // download
                     var a = document.createElement("a");
@@ -102,7 +102,6 @@
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
           ga('create', 'UA-86627205-2', 'auto');
           ga('send', 'pageview');
         </script>

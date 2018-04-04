@@ -71,20 +71,25 @@
             <tr>
                 <td align="center" id="td_ad_1">
                     <!-- REKLAMA -->
+<!--                    1/4 -->
+<!--
                     <div class="ad_container" id="ad_1" onclick="ad_clicked()">
                         <script type="text/javascript" src="//www.adfreestyle.pl/show/RtgEIcYRVMA"></script>
                     </div>
+-->
                     <!-- END REKLAMA -->
                 </td>
             </tr>
             <tr>
                 <td id="td_arrow_1">
-                    <div id="bottom"></div>
+<!--                    2/4 -->
+<!--                    <div id="bottom"></div>-->
                 </td>    
             </tr>
             <tr>                
                 <td>
-                    <div class="download_button_active" id="up" style="width: 336px;" onmouseover="up_over(this)" onmouseout="up_out(this)"><p>Pobierz</p></div>
+<!--                    3/4-->
+<!--                    <div class="download_button_active" id="up" style="width: 336px;" onmouseover="up_over(this)" onmouseout="up_out(this)"><p>Pobierz</p></div>-->
 
                     <?php
                     if (isset($_POST['id'])) $id = $_POST['id'];
@@ -101,7 +106,9 @@
                     
                     print "<input type='hidden' name='id' value='".$id."' />";
                     print "<input type='hidden' name='path' value='".$path."' />";
-                    print "<input type='submit' name='download' id='down' style='font-family: Consolas;' value='Teraz pobierz' class='download_button_inactive' />";
+//                    4/4
+//                    print "<input type='submit' name='download' id='down' style='font-family: Consolas;' value='Teraz pobierz' class='download_button_inactive' />";
+                    print "<input type='submit' name='download' id='down' style='font-family: Consolas;' value='Pobierz' class='download_button_active' />";
                     print "</form>";
                     ?>
                 </td>
@@ -109,6 +116,11 @@
             </table>
             
         </div> <!-- END container -->
+
+        <!-- PROPELLERADS AD -->
+        <!-- <script type="text/javascript" src="//go.onclasrv.com/apu.php?zoneid=1284377"></script> -->
+        <!-- <script src="//go.mobtrks.com/notice.php?p=1284391&interstitial=1"></script> -->
+        <!-- END PROPELLERADS AD -->
         
         <!-- GOOGLE ANALYTICS -->
         <script>
