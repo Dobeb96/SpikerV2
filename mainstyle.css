@@ -6,12 +6,12 @@ body {
 }
 
 header {
-/*    height: 20%;*/
+    padding-left: 1%;
     border-bottom: 1px solid #7A6969;
 }
 
 #container section {
-    line-height: 1.1em;
+    line-height: 1.2em;
     margin-left: .5%;
 }
 
@@ -43,15 +43,19 @@ a.change:hover
 }
 
 
-p {
+.big {
 	font-size: 26px;
 	font-style: normal;
 	font-weight: 200;
 }
 
+.gray {
+    color: silver;
+}
+
 footer {
     font-size: small;
-    color: #bdbdbd; /* taki szarawy */
+    color: #adadad; /* taki szarawy */
     text-align: center;
 }
 
@@ -77,6 +81,18 @@ footer {
     margin-left: auto;
     margin-right: auto;
 
+}
+
+.border-top {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #7A6969;
+} .comments {
+    padding-left: 1%;
+    width: 300px;
+    max-width: 98%;
+} i {
+    font-style: italic;
 }
 
 #bottom {

@@ -28,15 +28,14 @@
             
                 <!-- CONTENT POBIERANY Z SERWERA -->
             <section>
-            <span id="test"></span>
             <?php
             
-            if (isset ($_GET['id'])) {
-                $id = $_GET['id'];
+            if (isset($_POST['id'])) { $id = $_POST['id']; }
+            if (isset($_GET['id'])) { $id = $_GET['id']; }
+
             $directories = glob("./*", GLOB_ONLYDIR);
             print "<a href='./index.php'>Powrót</a>";
             print substr($directories[$id], 1);
-            }
                 
             $files = glob($directories[$id]."/*");
                 
@@ -49,25 +48,26 @@
             print "<h3>Przesłane pliki</h3>";
             $counter = 0;
                 
-            if (count($files) == 1)
-                print "<p><font color='silver'>Pusto tu, dodaj jakieś pliki</font></p>";
+            if (count($files) <= 2)
+                print "<p><font class='gray big'>Pusto tu, dodaj jakieś pliki</font></p>";
                 
             foreach ($files as $f) {
                 $char = strpos($f, '/', 2);
                 $fs = substr($f, $char+1);
                 
                 if ($f == $directories[$id]."/name.txt") { $counter++; continue; }
+                if ($f == $directories[$id]."/comment_contents_xya.txt") { $counter++; continue; }
                 print "<input type='checkbox' name='subject[$counter]' id='$counter' />";
                 print "<label for='$counter'>$fs</label>";
                 print "<a href='#' class='download' onclick='countDownloads(\"$f\", \"$fs\")'>Pobierz</a>";
-//                print "<a href='tobecontinued' class='change'>Zmień</a>";
                 print "<br>";
                 $counter++;
             }
-                
+
             include "przedmiot_akcje_grupowe.php";
             print "</form>";
             include "przedmiot_upload.php";
+            include "przedmiot_comments.php";
             ?>
             </section>
         </div> <!-- END container -->
@@ -82,11 +82,7 @@
                 var daily = readCookie("ad_daily_counter");
                 createCookie("ad_current_counter", counts, 1);
                 if (false) {
-                // if ( (daily == 0 && counts >= 4) || (daily == 1 && counts >= 10) ) {
-                    // show ad
-                    // window.open("./ad_individual.php?id=<?php echo $id ?>", "_self");
                 } else {
-                    // download
                     var a = document.createElement("a");
                     a.setAttribute("href", filepath);
                     a.setAttribute("download", file);
