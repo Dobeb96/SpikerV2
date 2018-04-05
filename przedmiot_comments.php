@@ -1,25 +1,27 @@
 <?php
 $month_pl = array(1 => 'stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia');
 
+$file = $directories[$id]."/comment_contents_xya.txt";
+
 if (isset($_POST["nickname"])) {
-    file_put_contents($files[0],
+    file_put_contents($file,
         "<b>".$_POST["nickname"]."</b>", FILE_APPEND);
-    file_put_contents($files[0],
+    file_put_contents($file,
         " dnia <b>".date('d-'), FILE_APPEND);
-    file_put_contents($files[0], $month_pl[date('n')], FILE_APPEND);
-    file_put_contents($files[0],
+    file_put_contents($file, $month_pl[date('n')], FILE_APPEND);
+    file_put_contents($file,
         date('-y')."</b>", FILE_APPEND);
-    file_put_contents($files[0], " napisał: <br><i>".$_POST["comment_content"]."</i><br><br>", FILE_APPEND);
+    file_put_contents($file, " napisał: <br><i>".$_POST["comment_content"]."</i><br><br>", FILE_APPEND);
     unset($_POST["nickname"]);
     unset($_POST["comment_content"]);
 }
 
 print "<h3 class='border-top'>Komentarze</h3>";
-if (file_get_contents($files[0]) == "") {
+if (file_get_contents($file) == "") {
     print "<p class='gray big'>Pusto tu, może dodasz komentarz?</p>";
 } else {
     print "<section class='comments'>";
-    readfile($files[0]);
+    readfile($file);
     print "</section>";
 }
 ?>
